@@ -57,9 +57,9 @@ export default class PipelineConstruct extends Construct {
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('us-west-2').addOns(devBoostrapArgo)},
-          { id: "test", stackBuilder: blueprint.clone('us-east-2').addOns(testBoostrapArgo)},
-          { id: "prod", stackBuilder: blueprint.clone('us-east-1').addOns(prodBoostrapArgo)}
+          { id: "dev", stackBuilder: blueprint.clone('us-west-2').addOns(devBootstrapArgo)},
+          { id: "test", stackBuilder: blueprint.clone('us-east-2').addOns(testBootstrapArgo)},
+          { id: "prod", stackBuilder: blueprint.clone('us-east-1').addOns(prodBootstrapArgo)}
         ]
       })
       .build(scope, id+'-stack', props);
